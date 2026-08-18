@@ -45,8 +45,8 @@ Official ATAK release builds are version-matched. Install the APK that correspon
 
 | Plugin APK | ATAK version |
 |---|---|
-| `ATAK-Plugin-TAKVideoWall-1.0--5.6.0-civ-release.apk` | ATAK-CIV **5.6.x** |
-| `ATAK-Plugin-TAKVideoWall-1.0--5.7.0-civ-release.apk` | ATAK-CIV **5.7.x** |
+| `ATAK-Plugin-TAKVideoWall-<version>--5.6.0-civ-release.apk` | ATAK-CIV **5.6.x** |
+| `ATAK-Plugin-TAKVideoWall-<version>--5.7.0-civ-release.apk` | ATAK-CIV **5.7.x** |
 
 Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 
@@ -73,5 +73,7 @@ Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 - Hidden feeds (off-page, or while the plugin is closed) do not decode, spending no battery or bandwidth.
 
 ## Version history
+
+**v1.1.1** — Pinned (persistent) feeds that survive restarts; saved-alias section in the feed drawer, so fixed cameras with no CoT presence are addable; RTSP DESCRIBE liveness filtering for saved aliases with hiccup-proof verdicts; closing the last tile opens the feed list; migrated to ATAK's stable video API.
 
 **v1.0** — Initial release. Adaptive grid, paged 2×2 wall, CoT feed discovery with FOV-based liveness, snap-to, feed drawer with 2525 symbols / team / battery, map-view filter, full-screen toggle with uninterrupted playback. Builds for ATAK-CIV 5.6 and 5.7.
