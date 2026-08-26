@@ -74,6 +74,8 @@ Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 
 ## Version history
 
+**v1.1.2** — Toolbar placement survives ATAK restarts; HTTP/HLS feeds (fixed public cameras, `.m3u8` streams) now play on the wall; release APKs carry an incrementing versionCode so MDM (Samsung Knox) upgrades apply cleanly.
+
 **v1.1.1** — Pinned (persistent) feeds that survive restarts; saved-alias section in the feed drawer, so fixed cameras with no CoT presence are addable; RTSP DESCRIBE liveness filtering for saved aliases with hiccup-proof verdicts; closing the last tile opens the feed list; migrated to ATAK's stable video API.
 
 **v1.0** — Initial release. Adaptive grid, paged 2×2 wall, CoT feed discovery with FOV-based liveness, snap-to, feed drawer with 2525 symbols / team / battery, map-view filter, full-screen toggle with uninterrupted playback. Builds for ATAK-CIV 5.6 and 5.7.
