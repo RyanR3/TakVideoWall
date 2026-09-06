@@ -47,6 +47,7 @@ Official ATAK release builds are version-matched. Install the APK that correspon
 |---|---|
 | `ATAK-Plugin-TAKVideoWall-<version>--5.6.0-civ-release.apk` | ATAK-CIV **5.6.x** |
 | `ATAK-Plugin-TAKVideoWall-<version>--5.7.0-civ-release.apk` | ATAK-CIV **5.7.x** |
+| `ATAK-Plugin-TAKVideoWall-<version>--5.8.0-civ-release.apk` | ATAK-CIV **5.8.x** |
 
 Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 
