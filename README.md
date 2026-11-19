@@ -31,11 +31,20 @@ The feed drawer shows each sender the way the map does:
 ### Map-view filter
 A "Show all" toggle limits the list to senders inside the current map view, using ATAK's own field-of-view filter — the same one Overlay Manager uses — so it agrees with the map under rotation and tilt. Working a sector? See only the feeds in it.
 
+### Favorites, categories, and saved walls
+Organize the feed list the way your operation runs:
+
+- **Favorites** — tap the ☆ next to a feed's play button and it moves to a ★ Favorites section at the top of the list.
+- **Categories** — long-press any feed to file it under UAS, Body Cam, DOT, School, or a category of your own. Each category becomes a collapsible group in the list, so a TOC tablet with dozens of feeds stays scannable.
+- **Saved walls** — arrange a wall, tap **Walls → Save current wall…**, and give it a name. Load it later in one tap: every feed that is streaming (or pinned) comes back in the same order with the same pins, and the plugin tells you which ones are not on air.
+
+Favorites, categories, and saved walls are stored with ATAK's settings, so they survive plugin updates.
+
 ### Seamless resize
 Expanding the wall to full screen (and collapsing back) resizes in place. Streams are never reconnected for a layout change — no spinner, no gap in playback.
 
 ### Lightweight by design
-The plugin bundles **no native libraries and no codecs**. All decoding and rendering runs through ATAK's own video stack, in-process — the APK is under 40 KB.
+The plugin bundles **no native libraries and no codecs**. All decoding and rendering runs through ATAK's own video stack, in-process — the APK is under 60 KB.
 
 ---
 
@@ -49,7 +58,7 @@ Official ATAK release builds are version-matched. Install the APK that correspon
 | `ATAK-Plugin-TAKVideoWall-<version>--5.7.0-civ-release.apk` | ATAK-CIV **5.7.x** |
 | `ATAK-Plugin-TAKVideoWall-<version>--5.8.0-civ-release.apk` | ATAK-CIV **5.8.x** |
 
-Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
+All three APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 
 ## Installation
 
@@ -65,7 +74,9 @@ Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 3. **Double-tap** a tile to spotlight it full-bleed; double-tap again to restore the grid.
 4. Tap a tile's **pan-to** control to collapse to that single feed beside the map, centered on its sender.
 5. Use **‹ ›** to page when more than four feeds are on the wall; **⛶** toggles full screen; **✕** removes a feed.
-6. Feeds appear and disappear from the list automatically as senders start and stop streaming.
+6. Tap **☆** on a feed to favorite it; **long-press** a feed to put it in a category.
+7. Tap **Walls** in the feed list to save the current wall under a name, load a saved wall, or delete one.
+8. Feeds appear and disappear from the list automatically as senders start and stop streaming.
 
 ## Notes
 
@@ -74,6 +85,10 @@ Both APKs are TPC-signed release builds from the tak.gov third-party pipeline.
 - Hidden feeds (off-page, or while the plugin is closed) do not decode, spending no battery or bandwidth.
 
 ## Version history
+
+**v1.2.0** — Favorite feeds (★ section at the top of the list); feed categories (UAS, Body Cam, DOT, School, or your own) shown as collapsible groups; named saved walls with one-tap load; new push-pin icon for pinned feeds. Each ATAK target now carries its own versionCode, so MDM platforms can hold all three builds side by side.
+
+**v1.1.3** — Per-tile stream audio (muted by default); RTSP latency matched to ATAK's native player; no video freeze when toggling audio; smaller, unified tile controls.
 
 **v1.1.2** — Toolbar placement survives ATAK restarts; HTTP/HLS feeds (fixed public cameras, `.m3u8` streams) now play on the wall; release APKs carry an incrementing versionCode so MDM (Samsung Knox) upgrades apply cleanly.
 
