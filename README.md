@@ -40,11 +40,19 @@ Organize the feed list the way your operation runs:
 
 Favorites, categories, and saved walls are stored with ATAK's settings, so they survive plugin updates.
 
+### Share walls through TAK Server Data Sync
+Saved walls can be shared with a whole team through a TAK Server Data Sync. Create a new data sync or join an existing one from **Walls → Data Sync…**, then share any saved wall to it. Everyone in the sync sees the shared walls under their own heading and loads them in one tap. Shared walls are kept on each device, so they still load when the server is out of reach.
+
+- **Read/write or read-only** — the owner decides whether members can share and remove walls, or only load them.
+- **Owner controls** — the owner can edit the description, member access, password, and channels, or delete the data sync for everyone.
+- **No credentials leave the device** — stream usernames, passwords, and tokens are stripped before a wall is shared. A receiving device plays each camera through its own saved alias for it.
+- **Nothing on the map** — shared walls are stored as small files in the data sync, never as map items, so they can live alongside an incident's markers and photos.
+
 ### Seamless resize
 Expanding the wall to full screen (and collapsing back) resizes in place. Streams are never reconnected for a layout change — no spinner, no gap in playback.
 
 ### Lightweight by design
-The plugin bundles **no native libraries and no codecs**. All decoding and rendering runs through ATAK's own video stack, in-process — the APK is under 60 KB.
+The plugin bundles **no native libraries and no codecs**. All decoding and rendering runs through ATAK's own video stack, in-process — the APK is under 90 KB.
 
 ---
 
@@ -75,7 +83,7 @@ All three APKs are TPC-signed release builds from the tak.gov third-party pipeli
 4. Tap a tile's **pan-to** control to collapse to that single feed beside the map, centered on its sender.
 5. Use **‹ ›** to page when more than four feeds are on the wall; **⛶** toggles full screen; **✕** removes a feed.
 6. Tap **☆** on a feed to favorite it; **long-press** a feed to put it in a category.
-7. Tap **Walls** in the feed list to save the current wall under a name, load a saved wall, or delete one.
+7. Tap **Walls** in the feed list to save the current wall under a name, load a saved wall, or delete one. Use **Data Sync…** there to share walls with your team.
 8. Feeds appear and disappear from the list automatically as senders start and stop streaming.
 
 ## Notes
@@ -85,6 +93,8 @@ All three APKs are TPC-signed release builds from the tak.gov third-party pipeli
 - Hidden feeds (off-page, or while the plugin is closed) do not decode, spending no battery or bandwidth.
 
 ## Version history
+
+**v1.3.1** — Share saved walls through TAK Server Data Sync: create, join, and leave data syncs; read/write or read-only membership; owner edit and delete; stream credentials stripped from shared walls.
 
 **v1.2.0** — Favorite feeds (★ section at the top of the list); feed categories (UAS, Body Cam, DOT, School, or your own) shown as collapsible groups; named saved walls with one-tap load; new push-pin icon for pinned feeds. Each ATAK target now carries its own versionCode, so MDM platforms can hold all three builds side by side.
 
